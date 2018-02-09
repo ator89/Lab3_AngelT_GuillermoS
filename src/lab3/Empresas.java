@@ -7,5 +7,4 @@ public class Empresas {
     private String nombre, email, password, descripcion;
     private int telefono;
     private ArrayList<Proyecto> proyectos = new ArrayList();
-
 }
