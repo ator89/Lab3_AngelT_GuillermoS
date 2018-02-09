@@ -2,25 +2,16 @@ package lab3;
 
 class Administrador {
 
-    private String nombre;
     private String usuario;
     private String contra;
 
     public Administrador() {
     }
 
-    public Administrador(String nombre, String usuario, String contra) {
-        this.nombre = nombre;
+    public Administrador(String usuario, String contra) {
+
         this.usuario = usuario;
         this.contra = contra;
-    }
-
-    public String getNombre() {
-        return nombre;
-    }
-
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
     }
 
     public String getUsuario() {
@@ -41,7 +32,7 @@ class Administrador {
 
     @Override
     public String toString() {
-        return "Administrador{" + "nombre=" + nombre + ", usuario=" + usuario + ", contra=" + contra + '}';
+        return "Administrador{" + "usuario=" + usuario + ", contra=" + contra + '}';
     }
 
 }
