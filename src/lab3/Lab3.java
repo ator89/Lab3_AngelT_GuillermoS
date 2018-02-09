@@ -25,6 +25,7 @@ public class Lab3 {
                         case "b":
                             System.out.println("Nombre Completo:");
                             String nombre = sc.nextLine();
+                            nombre = sc.nextLine();
                             System.out.println("Contraseña: ");
                             contra = sc.next();
                             System.out.println("Genero:");
@@ -180,11 +181,10 @@ public class Lab3 {
                     break;
                 default:
                     break;
-
             }//fin switch
             System.out.println("Desea ingresar otra opcion?");
             op = sc.next();
-        } while (op.equalsIgnoreCase("s"));
+        } while (op.equalsIgnoreCase("si"));
 
     }//fin main
 
