@@ -11,7 +11,7 @@ public class Lab3 {
         String op, usuario, contra, genero, lenguaje, departamento, municipio, vision, mision, correo, pais, pagina, contrasena, descripcion, universidad, idioma, red, hobbies, marca, modelo;
         int edad;
         boolean inscripcion;
-//      ConnectiveLine objeto = new ConnectiveLine();
+      ConnectiveLine objeto = new ConnectiveLine();
         do {
             switch (menu()) {
                 case "a":
@@ -21,6 +21,7 @@ public class Lab3 {
                             usuario = sc.next();
                             System.out.println("Contraseña: ");
                             contra = sc.next();
+                            objeto.getPersona().add(new Administrador(usuario, contra));
                             break;
                         case "b":
                             System.out.println("Nombre Completo:");
