@@ -9,6 +9,11 @@ public class Lab3 {
         
         Scanner sc = new Scanner (System.in);
         
+        String menu="";
+        
+        do{
+            
+        }while (!menu.equalsIgnoreCase("e"));
         
         
     }
