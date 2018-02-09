@@ -1,7 +1,34 @@
 package lab3;
 
-public class ProyectoWeb {
+import java.util.Date;
 
-    private DesarrolladorWeb dev;
+public class ProyectoWeb extends Proyecto{
+
+    private DesarrolladorWeb devWeb;
+
+    public ProyectoWeb() {
+        super();
+    }
+
+    public ProyectoWeb(DesarrolladorWeb devWeb, String nombre, String empresa, String descripcion, Date inicio, Date entrega, int precio) {
+        super(nombre, empresa, descripcion, inicio, entrega, precio);
+        this.devWeb = devWeb;
+    }
+
+    public DesarrolladorWeb getDevWeb() {
+        return devWeb;
+    }
+
+    public void setDevWeb(DesarrolladorWeb devWeb) {
+        this.devWeb = devWeb;
+    }
+
+    @Override
+    public String toString() {
+        return "ProyectoWeb{" + "devWeb=" + devWeb + '}';
+    }
+    
+    
+    
 
 }
