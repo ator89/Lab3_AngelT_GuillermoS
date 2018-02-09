@@ -1,10 +1,7 @@
-
-
 package lab3;
 
-
 public class Nacionales {
-    
+
     private String departamento, municipio, ciudad, mision, vision;
 
     public Nacionales() {
@@ -62,7 +59,5 @@ public class Nacionales {
     public String toString() {
         return "Nacionales{" + "departamento=" + departamento + ", municipio=" + municipio + ", ciudad=" + ciudad + ", mision=" + mision + ", vision=" + vision + '}';
     }
-    
-    
 
 }

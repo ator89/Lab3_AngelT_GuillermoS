@@ -1,13 +1,10 @@
-
-
 package lab3;
 
 import java.util.Date;
 
-
 public class Proyecto {
-    
-    private String nombre, empresa,descripcion;
+
+    private String nombre, empresa, descripcion;
     private Date inicio, entrega;
     private int precio;
 
@@ -75,7 +72,5 @@ public class Proyecto {
     public String toString() {
         return "Proyecto{" + "nombre=" + nombre + ", empresa=" + empresa + ", descripcion=" + descripcion + ", inicio=" + inicio + ", entrega=" + entrega + ", precio=" + precio + '}';
     }
-    
-    
 
 }

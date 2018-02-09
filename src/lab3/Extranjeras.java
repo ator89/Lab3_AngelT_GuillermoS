@@ -1,12 +1,9 @@
-
-
 package lab3;
 
 import java.util.ArrayList;
 
-
 public class Extranjeras {
-    
+
     private String pais, ciudad, pagina;
 
     public Extranjeras() {
@@ -46,7 +43,5 @@ public class Extranjeras {
     public String toString() {
         return "Extranjeras{" + "pais=" + pais + ", ciudad=" + ciudad + ", pagina=" + pagina + '}';
     }
-    
-    
 
 }
