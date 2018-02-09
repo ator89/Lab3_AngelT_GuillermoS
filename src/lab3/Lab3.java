@@ -4,15 +4,34 @@ package lab3;
 import java.util.Scanner;
 
 public class Lab3 {
+    static Scanner sc = new Scanner (System.in);
 
     public static void main(String[] args) {
         
-        Scanner sc = new Scanner (System.in);
+        
+        ConnectiveLine objeto = new ConnectiveLine();
         
         String menu="";
         
         do{
             menu();
+            
+            switch(menu){
+                case "a":
+                    break;
+                case "b":
+                    login();
+                    break;
+                case "c":
+                    
+                    break;
+                case "d":
+                    break;
+                default:
+                    break;
+                   
+                    
+            }
             
         }while (!menu.equalsIgnoreCase("e"));
         
@@ -23,13 +42,25 @@ public class Lab3 {
     public static void menu(){
         
         System.out.println("Menú principal: \n"+
-                    "1 - Registrar\n"+
-                    "2 - Login\n"+
-                    "3 - Modificar\n"+
-                    "4 - Eliminar\n");
+                    "a - Registrar\n"+
+                    "b - Login\n"+
+                    "c - Modificar\n"+
+                    "d - Eliminar\n");
         
     }
     
     
+    
+    public static void login(){
+        System.out.println("Login \n"+"Ingrese el correo: ");
+        String correo = sc.next();
+        
+        System.out.println("Ingrese la contraseña: ");
+        String password = sc.next();
+    }
+    
+    public void modificar(){
+        
+    }
 
 }
