@@ -13,12 +13,22 @@ class DesarrolladorWeb extends Freelance{
         super();
     }
 
-    public DesarrolladorWeb(String LenguajeP, String Universidad, String idioma, String nombre, String password, String genero, String ciudad, int edad, int dinero, int telefono, int id, String email) {
+    public DesarrolladorWeb(String LenguajeP, String Universidad, String idioma, 
+            String nombre, String password, String genero, String ciudad, 
+            int edad, int dinero, int telefono, int id, String email) {
         super(nombre, password, genero, ciudad, edad, dinero, telefono, id, email);
         this.LenguajeP = LenguajeP;
         this.Universidad = Universidad;
         this.idioma = idioma;
     }
+    
+    public DesarrolladorWeb(String lengua, String universidad, String idioma){
+        this.LenguajeP = lengua;
+        this.Universidad = universidad;
+        this.idioma = idioma;
+    }
+    
+    
 
     public String getLenguajeP() {
         return LenguajeP;

@@ -9,7 +9,8 @@ class Administrador extends Personas{
         super();
     }
 
-    public Administrador(String usuario, String contra) {
+    public Administrador(String usuario, String contra, int id, String email) {
+        super(id, email);
         this.usuario = usuario;
         this.contra = contra;
     }
@@ -34,6 +35,8 @@ class Administrador extends Personas{
     public String toString() {
         return "Administrador{" + "usuario=" + usuario + ", contra=" + contra + '}';
     }
+
+    
     
     
     

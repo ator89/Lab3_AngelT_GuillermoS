@@ -19,6 +19,12 @@ class DisenadorGrafico extends Freelance{
         this.hobbies = hobbies;
     }
 
+    public DisenadorGrafico(String universidad, String hobbies) {
+        this.universidad = universidad;
+        this.hobbies = hobbies;
+    }
+    
+
     public ArrayList<Proyecto> getListaProyectosPublicitarios() {
         return ListaProyectosPublicitarios;
     }

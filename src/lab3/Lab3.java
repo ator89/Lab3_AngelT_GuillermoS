@@ -10,6 +10,7 @@ public class Lab3 {
     public static void main(String[] args) {
         String op, usuario, contra, genero, lenguaje, departamento, municipio, vision, mision, correo, pais, pagina, contrasena, descripcion, universidad, idioma, red, hobbies, marca, modelo;
         int edad;
+        int ID_admin, ID;
         boolean inscripcion;
       ConnectiveLine objeto = new ConnectiveLine();
         do {
@@ -17,22 +18,43 @@ public class Lab3 {
                 case "a":
                     switch (Registrar()) {
                         case "a":
+                            System.out.println("Ingrese el ID:");
+                            ID_admin = sc.nextInt();
+                            
+                            System.out.println("Email:");
+                            String email_admin = sc.next();
+                            
                             System.out.println("Nombre de usuario:");
                             usuario = sc.next();
+                            
                             System.out.println("Contraseña: ");
                             contra = sc.next();
-                            objeto.getPersona().add(new Administrador(usuario, contra));
+                            
+                            objeto.getPersona().add(new Administrador(usuario, contra, ID_admin, email_admin));
                             break;
                         case "b":
-                            System.out.println("Nombre Completo:");
-                            String nombre = sc.nextLine();
-                            nombre = sc.nextLine();
+                            System.out.println("Ingrese el ID:");
+                            ID = sc.nextInt();
+                            
+                            System.out.println("Email:");
+                            String email = sc.next();
+                            
+                            System.out.println("Nombre:");
+                            String nombre = sc.next();
+                            
                             System.out.println("Contraseña: ");
-                            contra = sc.next();
+                            String password = sc.next();
                             System.out.println("Genero:");
-                            genero = sc.next();
+                            String genre = sc.next();
+                            System.out.println("Ciudad:");
+                            String ciudad = sc.next();
                             System.out.println("Edad:");
                             edad = sc.nextInt();
+                            System.out.println("Dinero:");
+                            double dinero = sc.nextDouble();
+                            System.out.println("Telefono:");
+                            int telefono = sc.nextInt();
+                            
                             ArrayList<String> listaempresas = new ArrayList();
                             String resp;
                             do {
@@ -41,12 +63,11 @@ public class Lab3 {
                                 System.out.println("Desea ingresar otra empresa:[si/no]");
                                 resp = sc.next();
                             } while (resp.equalsIgnoreCase("si"));
-                            System.out.println("Dinero:");
-                            double dinero = sc.nextDouble();
-                            System.out.println("Ciudad:");
-                            String ciudad = sc.next();
-                            System.out.println("Telefono:");
-                            String telefono = sc.next();
+                            
+                            
+                            
+                            
+                            objeto.getPersona().add(new Freelance(nombre, password, genre, ciudad,edad,dinero,telefono,ID, email));
                             switch (RegistroFreelance()) {
                                 case "a":
                                     System.out.println("Lenguaje de Programacion:");
@@ -56,12 +77,16 @@ public class Lab3 {
                                     System.out.println("Idioma:");
                                     idioma = sc.next();
                                     ArrayList<String> listaproyectoweb = new ArrayList();
+                                    
                                     do {
                                         System.out.println("Ingrese proyecto web a agregar:");
                                         listaproyectoweb.add(sc.nextLine());
                                         System.out.println("Desea ingresar otro proyecto:[si/no]");
                                         resp = sc.next();
                                     } while (resp.equalsIgnoreCase("si"));
+                                    
+                                    objeto.getPersona().add(new DesarrolladorWeb(lenguaje, universidad, idioma));
+                            
                                     break;
                                 case "b":
                                     ArrayList<String> listaproyectopublic = new ArrayList();
@@ -75,6 +100,7 @@ public class Lab3 {
                                     universidad = sc.next();
                                     System.out.println("Hobbies:");
                                     hobbies = sc.next();
+                                    objeto.getPersona().add(new DisenadorGrafico(universidad, hobbies));
                                     break;
                                 case "c":
                                     ArrayList<String> listaproyectopublicfotografo = new ArrayList();
@@ -134,7 +160,7 @@ public class Lab3 {
                             System.out.println("Nombre:");
                             nombre = sc.next();
                             System.out.println("Telefono:");
-                            telefono = sc.next();
+                            telefono = sc.nextInt();
                             ArrayList<String> listaproyecto = new ArrayList();
                             do {
                                 System.out.println("Ingrese proyecto publicitario a agregar:");

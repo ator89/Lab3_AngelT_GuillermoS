@@ -7,14 +7,15 @@ import java.util.ArrayList;
 class Freelance extends Personas{
     
     private String nombre, password, genero, ciudad;
-    private int edad, dinero, telefono;
+    private int edad, telefono;
+    private double dinero;
     private ArrayList<Empresas> empresas = new ArrayList();
 
 
     public Freelance() {
     }
 
-    public Freelance(String nombre, String password, String genero, String ciudad, int edad, int dinero, int telefono, int id, String email) {
+    public Freelance(String nombre, String password, String genero, String ciudad, int edad, double dinero, int telefono, int id, String email) {
         super(id, email);
         this.nombre = nombre;
         this.password = password;
@@ -65,11 +66,11 @@ class Freelance extends Personas{
         this.edad = edad;
     }
 
-    public int getDinero() {
+    public double getDinero() {
         return dinero;
     }
 
-    public void setDinero(int dinero) {
+    public void setDinero(double dinero) {
         this.dinero = dinero;
     }
 
