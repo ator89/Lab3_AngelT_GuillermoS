@@ -19,6 +19,14 @@ class Contador extends Freelance{
         this.estado = estado;
     }
 
+    public Contador(String universidad, String hobbie, boolean estado) {
+        this.universidad = universidad;
+        this.hobbie = hobbie;
+        this.estado = estado;
+    }
+    
+    
+
     public ArrayList<ProyectoComercial> getListaProyectosComerciales() {
         return listaProyectosComerciales;
     }

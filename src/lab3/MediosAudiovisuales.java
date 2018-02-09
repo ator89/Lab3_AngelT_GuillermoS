@@ -18,6 +18,12 @@ class MediosAudiovisuales extends Freelance{
         this.modelV = modelV;
     }
 
+    public MediosAudiovisuales(String marca, String modelV) {
+        this.marca = marca;
+        this.modelV = modelV;
+    }
+    
+    
     public ArrayList<ProyectoPublicitario> getProyectosPublicitarios() {
         return ProyectosPublicitarios;
     }

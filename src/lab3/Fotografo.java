@@ -18,6 +18,13 @@ class Fotografo extends Freelance{
         this.modeloCamara = modeloCamara;
     }
 
+    public Fotografo(String nombreMarca, String modeloCamara) {
+        this.nombreMarca = nombreMarca;
+        this.modeloCamara = modeloCamara;
+    }
+    
+    
+
     public ArrayList<ProyectoPublicitario> getListaProyectosPublicitarios() {
         return listaProyectosPublicitarios;
     }

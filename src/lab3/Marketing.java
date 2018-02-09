@@ -16,6 +16,11 @@ class Marketing extends Freelance{
         this.redsocial = redsocial;
     }
 
+    public Marketing(String redsocial) {
+        this.redsocial = redsocial;
+    }
+    
+
     public ArrayList<ProyectoComercial> getListaProyectosComerciales() {
         return listaProyectosComerciales;
     }

@@ -14,6 +14,8 @@ class Administrador extends Personas{
         this.usuario = usuario;
         this.contra = contra;
     }
+    
+    
 
     public String getUsuario() {
         return usuario;
