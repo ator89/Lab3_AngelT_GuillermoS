@@ -2,14 +2,16 @@ package lab3;
 
 import java.util.ArrayList;
 
-public class Extranjeras {
+public class Extranjeras extends Empresas{
 
     private String pais, ciudad, pagina;
 
     public Extranjeras() {
+        super();
     }
 
-    public Extranjeras(String pais, String ciudad, String pagina) {
+    public Extranjeras(String pais, String ciudad, String pagina, String nombre, String email, String password, String descripcion, int telefono) {
+        super(nombre, email, password, descripcion, telefono);
         this.pais = pais;
         this.ciudad = ciudad;
         this.pagina = pagina;
@@ -44,4 +46,5 @@ public class Extranjeras {
         return "Extranjeras{" + "pais=" + pais + ", ciudad=" + ciudad + ", pagina=" + pagina + '}';
     }
 
+    
 }

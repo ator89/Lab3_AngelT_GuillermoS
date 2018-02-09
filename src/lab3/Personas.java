@@ -2,56 +2,38 @@ package lab3;
 
 public class Personas {
 
-    private String id;
-    private String correo;
-    private Administrador admin;
-    private Freelance free;
+    protected int id;
+    protected String email;
 
     public Personas() {
     }
 
-    public Personas(String id, String correo, Administrador admin, Freelance free) {
+    public Personas(int id, String email) {
         this.id = id;
-        this.correo = correo;
-        this.admin = admin;
-        this.free = free;
+        this.email = email;
     }
 
-    public String getId() {
+    public int getId() {
         return id;
     }
 
-    public void setId(String id) {
+    public void setId(int id) {
         this.id = id;
     }
 
-    public String getCorreo() {
-        return correo;
+    public String getEmail() {
+        return email;
     }
 
-    public void setCorreo(String correo) {
-        this.correo = correo;
-    }
-
-    public Administrador getAdmin() {
-        return admin;
-    }
-
-    public void setAdmin(Administrador admin) {
-        this.admin = admin;
-    }
-
-    public Freelance getFree() {
-        return free;
-    }
-
-    public void setFree(Freelance free) {
-        this.free = free;
+    public void setEmail(String email) {
+        this.email = email;
     }
 
     @Override
     public String toString() {
-        return "Personas{" + "id=" + id + ", correo=" + correo + ", admin=" + admin + ", free=" + free + '}';
+        return "Personas{" + "id=" + id + ", email=" + email + '}';
     }
+    
+    
 
 }

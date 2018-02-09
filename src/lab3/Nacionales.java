@@ -1,13 +1,15 @@
 package lab3;
 
-public class Nacionales {
+public class Nacionales extends Empresas{
 
     private String departamento, municipio, ciudad, mision, vision;
 
     public Nacionales() {
+        super();
     }
 
-    public Nacionales(String departamento, String municipio, String ciudad, String mision, String vision) {
+    public Nacionales(String departamento, String municipio, String ciudad, String mision, String vision, String nombre, String email, String password, String descripcion, int telefono) {
+        super(nombre, email, password, descripcion, telefono);
         this.departamento = departamento;
         this.municipio = municipio;
         this.ciudad = ciudad;
@@ -59,5 +61,7 @@ public class Nacionales {
     public String toString() {
         return "Nacionales{" + "departamento=" + departamento + ", municipio=" + municipio + ", ciudad=" + ciudad + ", mision=" + mision + ", vision=" + vision + '}';
     }
+
+    
 
 }

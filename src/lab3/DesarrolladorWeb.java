@@ -2,17 +2,19 @@ package lab3;
 
 import java.util.ArrayList;
 
-class DesarrolladorWeb {
+class DesarrolladorWeb extends Freelance{
 
     private String LenguajeP;
     private String Universidad;
     private String idioma;
-    private ArrayList<String> proyectosweb = new ArrayList();
+    private ArrayList<ProyectoWeb> proyectosweb = new ArrayList();
 
     public DesarrolladorWeb() {
+        super();
     }
 
-    public DesarrolladorWeb(String LenguajeP, String Universidad, String idioma) {
+    public DesarrolladorWeb(String LenguajeP, String Universidad, String idioma, String nombre, String password, String genero, String ciudad, int edad, int dinero, int telefono, int id, String email) {
+        super(nombre, password, genero, ciudad, edad, dinero, telefono, id, email);
         this.LenguajeP = LenguajeP;
         this.Universidad = Universidad;
         this.idioma = idioma;
@@ -42,11 +44,11 @@ class DesarrolladorWeb {
         this.idioma = idioma;
     }
 
-    public ArrayList<String> getProyectosweb() {
+    public ArrayList<ProyectoWeb> getProyectosweb() {
         return proyectosweb;
     }
 
-    public void setProyectosweb(ArrayList<String> proyectosweb) {
+    public void setProyectosweb(ArrayList<ProyectoWeb> proyectosweb) {
         this.proyectosweb = proyectosweb;
     }
 

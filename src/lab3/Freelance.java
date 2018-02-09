@@ -1,87 +1,98 @@
 package lab3;
 
+import java.util.ArrayList;
 
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-/**
- *
- * @author Memo
- */
-class Freelance {
 
-    private DesarrolladorWeb DW;
-    private DisenadorGrafico DG;
-    private Fotografo F;
-    private MediosAudiovisuales MA;
-    private Marketing M;
-    private Contador C;
+
+class Freelance extends Personas{
+    
+    private String nombre, password, genero, ciudad;
+    private int edad, dinero, telefono;
+    private ArrayList<Empresas> empresas = new ArrayList();
+
 
     public Freelance() {
     }
 
-    public Freelance(DesarrolladorWeb DW, DisenadorGrafico DG, Fotografo F, MediosAudiovisuales MA, Marketing M, Contador C) {
-        this.DW = DW;
-        this.DG = DG;
-        this.F = F;
-        this.MA = MA;
-        this.M = M;
-        this.C = C;
+    public Freelance(String nombre, String password, String genero, String ciudad, int edad, int dinero, int telefono, int id, String email) {
+        super(id, email);
+        this.nombre = nombre;
+        this.password = password;
+        this.genero = genero;
+        this.ciudad = ciudad;
+        this.edad = edad;
+        this.dinero = dinero;
+        this.telefono = telefono;
     }
 
-    public DesarrolladorWeb getDW() {
-        return DW;
+    public String getNombre() {
+        return nombre;
     }
 
-    public void setDW(DesarrolladorWeb DW) {
-        this.DW = DW;
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
     }
 
-    public DisenadorGrafico getDG() {
-        return DG;
+    public String getPassword() {
+        return password;
     }
 
-    public void setDG(DisenadorGrafico DG) {
-        this.DG = DG;
+    public void setPassword(String password) {
+        this.password = password;
     }
 
-    public Fotografo getF() {
-        return F;
+    public String getGenero() {
+        return genero;
     }
 
-    public void setF(Fotografo F) {
-        this.F = F;
+    public void setGenero(String genero) {
+        this.genero = genero;
     }
 
-    public MediosAudiovisuales getMA() {
-        return MA;
+    public String getCiudad() {
+        return ciudad;
     }
 
-    public void setMA(MediosAudiovisuales MA) {
-        this.MA = MA;
+    public void setCiudad(String ciudad) {
+        this.ciudad = ciudad;
     }
 
-    public Marketing getM() {
-        return M;
+    public int getEdad() {
+        return edad;
     }
 
-    public void setM(Marketing M) {
-        this.M = M;
+    public void setEdad(int edad) {
+        this.edad = edad;
     }
 
-    public Contador getC() {
-        return C;
+    public int getDinero() {
+        return dinero;
     }
 
-    public void setC(Contador C) {
-        this.C = C;
+    public void setDinero(int dinero) {
+        this.dinero = dinero;
+    }
+
+    public int getTelefono() {
+        return telefono;
+    }
+
+    public void setTelefono(int telefono) {
+        this.telefono = telefono;
+    }
+
+    public ArrayList<Empresas> getEmpresas() {
+        return empresas;
+    }
+
+    public void setEmpresas(ArrayList<Empresas> empresas) {
+        this.empresas = empresas;
     }
 
     @Override
     public String toString() {
-        return "Freelance{" + "DW=" + DW + ", DG=" + DG + ", F=" + F + ", MA=" + MA + ", M=" + M + ", C=" + C + '}';
+        return "Freelance{" + "nombre=" + nombre + ", password=" + password + ", genero=" + genero + ", ciudad=" + ciudad + ", edad=" + edad + ", dinero=" + dinero + ", telefono=" + telefono + ", empresas=" + empresas + '}';
     }
+
 
 }

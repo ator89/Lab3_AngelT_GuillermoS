@@ -2,47 +2,51 @@ package lab3;
 
 import java.util.ArrayList;
 
-class Fotografo {
+class Fotografo extends Freelance{
 
-    private ArrayList<String> listaProyectosPublicitarios = new ArrayList();
-    private String nombremarca;
-    private String modelocamara;
+    private ArrayList<ProyectoPublicitario> listaProyectosPublicitarios = new ArrayList();
+    private String nombreMarca;
+    private String modeloCamara;
 
     public Fotografo() {
+        super();
     }
 
-    public Fotografo(String nombremarca, String modelocamara) {
-        this.nombremarca = nombremarca;
-        this.modelocamara = modelocamara;
+    public Fotografo(String nombreMarca, String modeloCamara, String nombre, String password, String genero, String ciudad, int edad, int dinero, int telefono, int id, String email) {
+        super(nombre, password, genero, ciudad, edad, dinero, telefono, id, email);
+        this.nombreMarca = nombreMarca;
+        this.modeloCamara = modeloCamara;
     }
 
-    public ArrayList<String> getListaProyectosPublicitarios() {
+    public ArrayList<ProyectoPublicitario> getListaProyectosPublicitarios() {
         return listaProyectosPublicitarios;
     }
 
-    public void setListaProyectosPublicitarios(ArrayList<String> listaProyectosPublicitarios) {
+    public void setListaProyectosPublicitarios(ArrayList<ProyectoPublicitario> listaProyectosPublicitarios) {
         this.listaProyectosPublicitarios = listaProyectosPublicitarios;
     }
 
-    public String getNombremarca() {
-        return nombremarca;
+    public String getNombreMarca() {
+        return nombreMarca;
     }
 
-    public void setNombremarca(String nombremarca) {
-        this.nombremarca = nombremarca;
+    public void setNombreMarca(String nombreMarca) {
+        this.nombreMarca = nombreMarca;
     }
 
-    public String getModelocamara() {
-        return modelocamara;
+    public String getModeloCamara() {
+        return modeloCamara;
     }
 
-    public void setModelocamara(String modelocamara) {
-        this.modelocamara = modelocamara;
+    public void setModeloCamara(String modeloCamara) {
+        this.modeloCamara = modeloCamara;
     }
 
     @Override
     public String toString() {
-        return "Fotografo{" + "listaProyectosPublicitarios=" + listaProyectosPublicitarios + ", nombremarca=" + nombremarca + ", modelocamara=" + modelocamara + '}';
+        return "Fotografo{" + "listaProyectosPublicitarios=" + listaProyectosPublicitarios + ", nombreMarca=" + nombreMarca + ", modeloCamara=" + modeloCamara + '}';
     }
+
+    
 
 }

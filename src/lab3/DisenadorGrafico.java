@@ -2,25 +2,28 @@ package lab3;
 
 import java.util.ArrayList;
 
-class DisenadorGrafico {
+class DisenadorGrafico extends Freelance{
 
-    private ArrayList<String> ListaProyectosPublicitarios = new ArrayList();
-    private String universidad;
-    private String hobbies;
+    private ArrayList<Proyecto> ListaProyectosPublicitarios = new ArrayList();
+    private String universidad, hobbies;
 
     public DisenadorGrafico() {
+        super();
     }
 
-    public DisenadorGrafico(String universidad, String hobbies) {
+    public DisenadorGrafico(String universidad, String hobbies, String nombre, 
+            String password, String genero, String ciudad, int edad, int dinero,
+            int telefono, int id, String email) {
+        super(nombre, password, genero, ciudad, edad, dinero, telefono, id, email);
         this.universidad = universidad;
         this.hobbies = hobbies;
     }
 
-    public ArrayList<String> getListaProyectosPublicitarios() {
+    public ArrayList<Proyecto> getListaProyectosPublicitarios() {
         return ListaProyectosPublicitarios;
     }
 
-    public void setListaProyectosPublicitarios(ArrayList<String> ListaProyectosPublicitarios) {
+    public void setListaProyectosPublicitarios(ArrayList<Proyecto> ListaProyectosPublicitarios) {
         this.ListaProyectosPublicitarios = ListaProyectosPublicitarios;
     }
 
@@ -44,5 +47,7 @@ class DisenadorGrafico {
     public String toString() {
         return "DisenadorGrafico{" + "ListaProyectosPublicitarios=" + ListaProyectosPublicitarios + ", universidad=" + universidad + ", hobbies=" + hobbies + '}';
     }
+
+    
 
 }

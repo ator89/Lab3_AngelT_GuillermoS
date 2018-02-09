@@ -2,27 +2,28 @@ package lab3;
 
 import java.util.ArrayList;
 
-class Contador {
+class Contador extends Freelance{
 
-    private ArrayList<String> listaProyectosComerciales = new ArrayList();
-    private String universidad;
-    private boolean inscripcionColegio;
-    private String hobbie;
+    private ArrayList<ProyectoComercial> listaProyectosComerciales = new ArrayList();
+    private String universidad, hobbie;
+    private boolean estado;
 
     public Contador() {
+        super();
     }
 
-    public Contador(String universidad, boolean inscripcionColegio, String hobbie) {
+    public Contador(String universidad, String hobbie, boolean estado, String nombre, String password, String genero, String ciudad, int edad, int dinero, int telefono, int id, String email) {
+        super(nombre, password, genero, ciudad, edad, dinero, telefono, id, email);
         this.universidad = universidad;
-        this.inscripcionColegio = inscripcionColegio;
         this.hobbie = hobbie;
+        this.estado = estado;
     }
 
-    public ArrayList<String> getListaProyectosComerciales() {
+    public ArrayList<ProyectoComercial> getListaProyectosComerciales() {
         return listaProyectosComerciales;
     }
 
-    public void setListaProyectosComerciales(ArrayList<String> listaProyectosComerciales) {
+    public void setListaProyectosComerciales(ArrayList<ProyectoComercial> listaProyectosComerciales) {
         this.listaProyectosComerciales = listaProyectosComerciales;
     }
 
@@ -34,14 +35,6 @@ class Contador {
         this.universidad = universidad;
     }
 
-    public boolean isInscripcionColegio() {
-        return inscripcionColegio;
-    }
-
-    public void setInscripcionColegio(boolean inscripcionColegio) {
-        this.inscripcionColegio = inscripcionColegio;
-    }
-
     public String getHobbie() {
         return hobbie;
     }
@@ -50,9 +43,19 @@ class Contador {
         this.hobbie = hobbie;
     }
 
-    @Override
-    public String toString() {
-        return "Contador{" + "listaProyectosComerciales=" + listaProyectosComerciales + ", universidad=" + universidad + ", inscripcionColegio=" + inscripcionColegio + ", hobbie=" + hobbie + '}';
+    public boolean isEstado() {
+        return estado;
     }
 
+    public void setEstado(boolean estado) {
+        this.estado = estado;
+    }
+
+    @Override
+    public String toString() {
+        return "Contador{" + "listaProyectosComerciales=" + listaProyectosComerciales + ", universidad=" + universidad + ", hobbie=" + hobbie + ", estado=" + estado + '}';
+    }
+    
+    
+    
 }//fin clase contador
