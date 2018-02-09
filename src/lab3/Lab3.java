@@ -14,6 +14,9 @@ public class Lab3 {
                 case "a":
                     switch (Registrar()) {
                         case "a":
+                            System.out.println("Nombre de usuario:");
+                            
+                            System.out.println("Contraseña: ");
                             break;
                         case "b":
                             break;
@@ -37,7 +40,6 @@ public class Lab3 {
         } while (op.equalsIgnoreCase("s"));
 
     }//fin main
-    
 
     public static String menu() {
 
