@@ -2,7 +2,6 @@ package lab3;
 
 class Administrador extends Personas{
 
-    private String nombre;
     private String usuario;
     private String contra;
 
@@ -10,19 +9,9 @@ class Administrador extends Personas{
         super();
     }
 
-    public Administrador(String nombre, String usuario, String contra, int id, String email) {
-        super(id, email);
-        this.nombre = nombre;
+    public Administrador(String usuario, String contra) {
         this.usuario = usuario;
         this.contra = contra;
-    }
-
-    public String getNombre() {
-        return nombre;
-    }
-
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
     }
 
     public String getUsuario() {
@@ -43,9 +32,10 @@ class Administrador extends Personas{
 
     @Override
     public String toString() {
-        return "Administrador{" + "nombre=" + nombre + ", usuario=" + usuario + ", contra=" + contra + '}';
+        return "Administrador{" + "usuario=" + usuario + ", contra=" + contra + '}';
     }
-
+    
+    
     
 
 }
