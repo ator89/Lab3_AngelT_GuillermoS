@@ -8,6 +8,7 @@
  *
  * @author Memo
  */
+package lab3;
 class Administrador {
 
     private String nombre;
