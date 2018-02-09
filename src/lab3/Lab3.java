@@ -8,7 +8,7 @@ public class Lab3 {
     static Scanner sc = new Scanner(System.in);
 
     public static void main(String[] args) {
-        String op, usuario, contra, genero, lenguaje, universidad, idioma, red, hobbies, marca, modelo;
+        String op, usuario, contra, genero, lenguaje, departamento, municipio, vision, mision, correo, pais, pagina, contrasena, descripcion, universidad, idioma, red, hobbies, marca, modelo;
         int edad;
         boolean inscripcion;
 //      ConnectiveLine objeto = new ConnectiveLine();
@@ -129,6 +129,45 @@ public class Lab3 {
                             }//fin switch
                             break;
                         case "c":
+                            System.out.println("Nombre:");
+                            nombre = sc.next();
+                            System.out.println("Telefono:");
+                            telefono = sc.next();
+                            ArrayList<String> listaproyecto = new ArrayList();
+                            do {
+                                System.out.println("Ingrese proyecto publicitario a agregar:");
+                                listaproyecto.add(sc.nextLine());
+                                System.out.println("Desea ingresar otro proyecto:[si/no]");
+                                resp = sc.next();
+                            } while (resp.equalsIgnoreCase("si"));
+                            System.out.println("Correo Electronico:");
+                            correo = sc.next();
+                            System.out.println("Contraseña:");
+                            contrasena = sc.next();
+                            System.out.println("Descripcion:");
+                            descripcion = sc.next();
+                            switch (RegistroEmp()) {
+                                case "a":
+                                    System.out.println("Pais:");
+                                    pais = sc.next();
+                                    System.out.println("ciudad:");
+                                    ciudad = sc.next();
+                                    System.out.println("Pagina Web:");
+                                    pagina = sc.next();
+                                    break;
+                                case "b":
+                                    System.out.println("Departamento:");
+                                    departamento = sc.next();
+                                    System.out.println("Municipio:");
+                                    municipio = sc.next();
+                                    System.out.println("Ciudad:");
+                                    ciudad = sc.next();
+                                    System.out.println("Mision:");
+                                    mision = sc.next();
+                                    System.out.println("Vision:");
+                                    vision = sc.next();
+                                    break;
+                            }
                             break;
                     }//fin switch
                     break;
@@ -171,6 +210,14 @@ public class Lab3 {
         String op = sc.next();
         return op;
     }//fin registrar
+
+    public static String RegistroEmp() {
+        System.out.println("a - Empresa Extranjera \n"
+                + "b - Empresa Nacional");
+        System.out.println("Ingrese opcion");
+        String op = sc.next();
+        return op;
+    }
 
     public static String RegistroFreelance() {
         System.out.println("a - Desarrollador Web \n"
